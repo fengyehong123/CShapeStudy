@@ -24,7 +24,7 @@
 
 namespace ConsoleApp1._01_数据类型
 {
-	class _05_常量
+	class _03_常量
 	{
 		// ___________________________ 静态常量（编译时常量）const	 ___________________________
 		// 在编译时就确定了值，必须在声明时就进行初始化且之后不能进行更改，可在类和方法中定义。
@@ -47,7 +47,7 @@ namespace ConsoleApp1._01_数据类型
 		private readonly static string str1 = "Hello World!";
 		
 		// 构造方法, 在构造函数对象的时候，赋值常量
-		public _05_常量()
+		public _03_常量()
 		{
 			// 通过构造函数, 在运行时赋值
 			CreatedAt = DateTime.Now;

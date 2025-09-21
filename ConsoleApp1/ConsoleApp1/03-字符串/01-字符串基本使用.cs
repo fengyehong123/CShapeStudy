@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ConsoleApp1._01_数据类型
+namespace ConsoleApp1._03_字符串
 {
-	class _03_字符串
+	class _01_字符串基本使用
 	{
 		public static void PrintInfo1()
 		{

@@ -8,10 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ConsoleApp1</RootNamespace>
     <AssemblyName>ConsoleApp1</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>11.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,20 +50,22 @@
   <ItemGroup>
     <Compile Include="01-数据类型\01-基本数据类型.cs" />
     <Compile Include="01-数据类型\02-引用数据类型.cs" />
-    <Compile Include="01-数据类型\03-字符串.cs" />
-    <Compile Include="01-数据类型\04-日期格式化为字符串.cs" />
-    <Compile Include="01-数据类型\05-常量.cs" />
-    <Compile Include="01-数据类型\06-数据类型转换.cs" />
+    <Compile Include="02-判断与运算符\01-if判断与运算符.cs" />
+    <Compile Include="02-判断与运算符\02-switch语句.cs" />
+    <Compile Include="03-字符串\01-字符串基本使用.cs" />
+    <Compile Include="03-字符串\02-日期格式化为字符串.cs" />
+    <Compile Include="01-数据类型\03-常量.cs" />
+    <Compile Include="01-数据类型\04-数据类型转换.cs" />
+    <Compile Include="04-循环\01-while循环.cs" />
+    <Compile Include="04-循环\02-for循环.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="笔记.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="02-运算符\" />
-    <Folder Include="03-判断\" />
-    <Folder Include="04-循环\" />
     <Folder Include="05-数组\" />
     <Folder Include="06-集合\" />
     <Folder Include="07-类\" />
