@@ -52,12 +52,17 @@
     <Compile Include="01-数据类型\02-引用数据类型.cs" />
     <Compile Include="02-判断与运算符\01-if判断与运算符.cs" />
     <Compile Include="02-判断与运算符\02-switch语句.cs" />
+    <Compile Include="02-判断与运算符\03-双问号运算符.cs" />
     <Compile Include="03-字符串\01-字符串基本使用.cs" />
     <Compile Include="03-字符串\02-日期格式化为字符串.cs" />
     <Compile Include="01-数据类型\03-常量.cs" />
     <Compile Include="01-数据类型\04-数据类型转换.cs" />
     <Compile Include="04-循环\01-while循环.cs" />
     <Compile Include="04-循环\02-for循环.cs" />
+    <Compile Include="05-数组\01-初始化数组.cs" />
+    <Compile Include="05-数组\02-交错数组.cs" />
+    <Compile Include="05-数组\03-参数数组.cs" />
+    <Compile Include="05-数组\04-数组的属性方法.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -66,7 +71,6 @@
     <None Include="笔记.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="05-数组\" />
     <Folder Include="06-集合\" />
     <Folder Include="07-类\" />
   </ItemGroup>
