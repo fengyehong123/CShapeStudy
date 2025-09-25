@@ -32,6 +32,7 @@ namespace ConsoleApp1
 			_02_交错数组.PrintInfo();
 			_03_参数数组.PrintInfo("贾飞天", 1, 2, 3);
 			_04_数组的属性方法.PrintInfo1();
+			_04_数组的属性方法.PrintInfo2();
 		}
 	}
 }

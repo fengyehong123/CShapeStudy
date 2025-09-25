@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <LangVersion>11.0</LangVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -62,7 +62,7 @@
     <Compile Include="05-数组\01-初始化数组.cs" />
     <Compile Include="05-数组\02-交错数组.cs" />
     <Compile Include="05-数组\03-参数数组.cs" />
-    <Compile Include="05-数组\04-数组的属性方法.cs" />
+    <Compile Include="05-数组\04-数组的属性和方法.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
