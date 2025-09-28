@@ -70,6 +70,15 @@ namespace ConsoleApp1._03_字符串
 
 			// 字符串截取
 			Console.WriteLine("Hello World".Substring(0, 5)); // Hello
+
+			// 字符串分割为数组
+			string text = "123 456,789:101112";
+			string[] textArrys = text.Split(new string[] { " ", ":", "," }, StringSplitOptions.RemoveEmptyEntries);
+			string[] arr8 = Array.FindAll(textArrys, item => item.Length > 2);
+			foreach (string item in arr8)
+			{
+				Console.WriteLine(item);
+			}
 		}
 	}
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace ConsoleApp1._05_数组
 {
@@ -35,6 +37,8 @@ namespace ConsoleApp1._05_数组
 			// 数组元素反转
 			Array.Reverse(arr2);
 			Console.WriteLine("逆转数组： ");
+			// 数组排序
+			Array.Sort(arr2);
 
 			// 判断数组内是否包含指定的元素, 只要有一个元素满足条件就返回 true
 			bool result1 = Array.Exists(arr2, name => name == 3);
@@ -51,6 +55,32 @@ namespace ConsoleApp1._05_数组
 			// 创建一个空数组的实例
 			int[] arr5 = Array.Empty<int>();
 
+			Console.WriteLine("__________________________________________");
+			// 搜索符合条件的第一个元素并返回
+			int item1 = Array.Find(arr3, item => item > 3);
+			Console.WriteLine(item1);  // 4
+			// 返回符合条件的所有元素
+			int[] arr6 = Array.FindAll(arr3, item => item > 3);
+
+			// 使用 Array.ForEach 进行循环
+			Array.ForEach(arr6, item => {
+				Console.WriteLine(item + 100);
+				// 104
+				// 105
+			});
+
+			// 可以使用Linq表达式, 对数组中的每一个元素进行处理
+			int[] arr7 = arr6.Select(item => item + 100).ToArray();
+			List<int> list7 = arr6.Select(item => item + 100).ToList();
+
+			Console.WriteLine("__________________________________________");
+			string text = "123 456,789:101112";
+			string[] textArrys = text.Split(new string[] { " ", ":", "," }, StringSplitOptions.RemoveEmptyEntries);
+			string[] arr8 = Array.FindAll(textArrys, item => item.Length > 2);
+			foreach (string item in arr8)
+			{
+				Console.WriteLine(item);
+			}
 		}
 
 	}

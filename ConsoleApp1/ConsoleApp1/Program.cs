@@ -3,6 +3,8 @@ using ConsoleApp1._02_判断与运算符;
 using ConsoleApp1._03_字符串;
 using ConsoleApp1._04_循环;
 using ConsoleApp1._05_数组;
+using ConsoleApp1._06_集合;
+using ConsoleApp1._07_结构体;
 
 namespace ConsoleApp1
 {
@@ -33,6 +35,16 @@ namespace ConsoleApp1
 			_03_参数数组.PrintInfo("贾飞天", 1, 2, 3);
 			_04_数组的属性方法.PrintInfo1();
 			_04_数组的属性方法.PrintInfo2();
+
+			// 创建一个结构体
+			_01_定义结构体 struct1 = new(10, 20);
+			struct1.Display();
+			_01_定义结构体 struct2 = new _01_定义结构体(100, 200);
+			struct2.Display();
+
+			_02_Dictionary.PrintInfo();
+
+
 		}
 	}
 }

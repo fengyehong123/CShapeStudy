@@ -63,16 +63,29 @@
     <Compile Include="05-数组\02-交错数组.cs" />
     <Compile Include="05-数组\03-参数数组.cs" />
     <Compile Include="05-数组\04-数组的属性和方法.cs" />
+    <Compile Include="06-集合\01-List.cs" />
+    <Compile Include="06-集合\02-Dictionary.cs" />
+    <Compile Include="06-集合\03-HashSet.cs" />
+    <Compile Include="06-集合\05-不可变集合.cs" />
+    <Compile Include="06-集合\04-并发集合.cs" />
+    <Compile Include="07-结构体\01-定义结构体.cs" />
+    <Compile Include="07-结构体\02-实现接口的结构体.cs" />
+    <Compile Include="08-类\多态.cs" />
+    <Compile Include="08-类\枚举.cs" />
+    <Compile Include="08-类\继承.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="06-集合\00-说明.md" />
     <None Include="App.config" />
     <None Include="笔记.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="06-集合\" />
-    <Folder Include="07-类\" />
+    <Folder Include="09-接口\" />
+    <Folder Include="10-预处理器指令\" />
+    <Folder Include="11-正则表达式\" />
+    <Folder Include="12-文件处理\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
