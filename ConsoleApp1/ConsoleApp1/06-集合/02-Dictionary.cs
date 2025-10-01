@@ -1,4 +1,5 @@
 ﻿using System;
+// Dictionary 所依赖的命名空间
 using System.Collections.Generic;
 using System.Linq;
 
@@ -49,6 +50,28 @@ namespace ConsoleApp1._06_集合
 
 			// ------ 使用Linq表达式 ------
 			personDict.ToList().ForEach(kvPair => Console.WriteLine($"{kvPair.Key}: {kvPair.Value}"));
+			// 转换为一个新的字典
+			Dictionary<string, int> dict1 = personDict.ToDictionary(kv => kv.Key, kv => kv.Value + 100);
+
+			// 删除字典中的指定key
+			dict1.Remove("Cat");
+
+			// 清空字典
+			dict1.Clear();
+
+			// 判断key是否存在
+			if (personDict.ContainsKey("Tom"))
+			{
+				Console.WriteLine("Tom这个key在字典中存在");
+			}
+
+			Console.WriteLine("__________________________________________");
+			// 筛选出 value > 18 的数据
+			Dictionary<string, int> dict2 = personDict.Where(kv => kv.Value > 18).ToDictionary(kv => kv.Key, kv => kv.Value);
+			foreach (string key in dict2.Keys)
+			{
+				Console.WriteLine($"{key}: {personDict[key]}");
+			}
 		}
 	}
 }

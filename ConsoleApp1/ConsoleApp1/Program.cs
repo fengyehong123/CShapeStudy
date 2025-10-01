@@ -42,7 +42,9 @@ namespace ConsoleApp1
 			_01_定义结构体 struct2 = new _01_定义结构体(100, 200);
 			struct2.Display();
 
-			_02_Dictionary.PrintInfo();
+			_01_List.PrintInfo1();
+			_01_List.PrintInfo2();
+			// _02_Dictionary.PrintInfo();
 
 
 		}
