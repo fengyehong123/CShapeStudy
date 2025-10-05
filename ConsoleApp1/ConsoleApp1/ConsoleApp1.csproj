@@ -66,13 +66,17 @@
     <Compile Include="06-集合\01-List.cs" />
     <Compile Include="06-集合\02-Dictionary.cs" />
     <Compile Include="06-集合\03-HashSet.cs" />
-    <Compile Include="06-集合\05-不可变集合.cs" />
-    <Compile Include="06-集合\04-并发集合.cs" />
+    <Compile Include="06-集合\04-SortedList.cs" />
+    <Compile Include="06-集合\05-SortedDictionary.cs" />
+    <Compile Include="06-集合\07-不可变集合.cs" />
+    <Compile Include="06-集合\06-并发集合.cs" />
     <Compile Include="07-结构体\01-定义结构体.cs" />
     <Compile Include="07-结构体\02-实现接口的结构体.cs" />
-    <Compile Include="08-类\多态.cs" />
-    <Compile Include="08-类\枚举.cs" />
-    <Compile Include="08-类\继承.cs" />
+    <Compile Include="08-类\01-创建类.cs" />
+    <Compile Include="08-类\02-静态类.cs" />
+    <Compile Include="08-类\03-抽象类.cs" />
+    <Compile Include="08-类\04-密封类.cs" />
+    <Compile Include="08-类\05-枚举类.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
