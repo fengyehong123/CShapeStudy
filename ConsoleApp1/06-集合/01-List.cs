@@ -16,7 +16,7 @@ namespace ConsoleApp1._06_集合
 		{
 			Console.WriteLine("__________________________________________");
 			// 创建一个List对象, 并赋予初始值
-			List<int> numbers = new() { 1, 2, 3 };
+			List<int> numbers = new List<int>() { 1, 2, 3 };
 			// 向List集合中追加1个元素
 			numbers.Add(4);
 			// 还可以批量追加元素
@@ -47,7 +47,7 @@ namespace ConsoleApp1._06_集合
 			numbers.Clear();
 
 			// 创建一个List对象, 并赋予初始值
-			List<int> list1 = new() { 1, 2, 3, 4 };
+			List<int> list1 = [1, 2, 3, 4];
 
 			// 判断元素是否存在
 			if (list1.Contains(2)) 
@@ -80,7 +80,7 @@ namespace ConsoleApp1._06_集合
 			// Linq表达式
 
 			// 创建一个List对象, 并赋予初始值
-			List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8 };
+			List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
 			// 🔴过滤出偶数
 			List<int> numArry1 = numbers.Where(x => x % 2 == 0).ToList();
@@ -88,7 +88,7 @@ namespace ConsoleApp1._06_集合
 			Console.WriteLine(string.Join("_", numArry1));  // 2_4_6_8
 
 			// 🔴获取每个数的平方
-			List<int> numArry2 = numbers.Select(x => x * x).ToList();
+			List<int> numArry2 = [.. numbers.Select(x => x * x)];
 			foreach (int item in numArry2)
 			{
 				Console.WriteLine(item);
@@ -97,7 +97,6 @@ namespace ConsoleApp1._06_集合
 			// 🔴获取List中元素的总和, 最大值
 			Console.WriteLine(numbers.Sum());  // 36
 			Console.WriteLine(numbers.Max());  // 8
-
 		}
 	}
 }

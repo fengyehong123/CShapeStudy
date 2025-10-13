@@ -5,7 +5,7 @@ namespace ConsoleApp1._03_字符串
 	class _02_日期格式化为字符串
 	{
 		// 定义一个日期对象
-		private readonly static DateTime dt = new DateTime(2025, 9, 21, 17, 16, 32, 108);
+		private readonly static DateTime dt = new(2025, 9, 21, 17, 16, 32, 108);
 
 		public static void PrintInfo1()
 		{

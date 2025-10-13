@@ -25,6 +25,13 @@ namespace ConsoleApp1._05_数组
 				"f"
 			};
 
+			// 甚至可以使用集合表达式
+			string[] strArry4 = [
+				"d",
+				"e",
+				"f"
+			];
+
 			// 创建一个多维数组
 			int[,] matrix1 = new int[2, 3]
 			{

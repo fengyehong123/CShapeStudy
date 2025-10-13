@@ -1,5 +1,4 @@
-﻿using System;
-/*
+﻿/*
 	在 C# 里，结构体（struct） 是一种 值类型，和类（class）相似但有一些重要区别。
 	🔴特点
 		1. 值类型：存储在栈上（或者嵌套在引用类型对象里）。赋值时会 复制整个对象。
@@ -24,6 +23,8 @@
 	_01_定义结构体 struct2 = new _01_定义结构体(100, 200);
 	struct2.Display();
 */
+using System;
+
 namespace ConsoleApp1._07_结构体
 {
 	public struct _01_定义结构体

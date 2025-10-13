@@ -7,6 +7,15 @@ using ConsoleApp1._05_数组;
 using ConsoleApp1._06_集合;
 using ConsoleApp1._07_结构体;
 using ConsoleApp1._08_类;
+using ConsoleApp1._09_接口;
+using ConsoleApp1._10_预处理器指令;
+using ConsoleApp1._11_using的用法;
+using ConsoleApp1._12_正则表达式;
+using ConsoleApp1._13_IO处理;
+
+// 系统的命名空间
+using System;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -52,15 +61,37 @@ namespace ConsoleApp1
 			_03_HashSet.PrintInfo2();
 			_04_SortedList.PrintInfo();
 			_05_SortedDictionary.PrintInfo();
+			集合表达式.PrintInfo();
 		}
 
-		static void Main(string[] args) 
+		static void Main02(string[] args)
 		{
 			_01_创建类_Utils.PrintInfo();
 			_03_抽象类_Utils.PrintInfo();
 			_04_密封类_Utils.PrintInfo();
 			_05_枚举类_Utils.PrintInfo1();
 			_05_枚举类_Utils.ForeachEnum();
+			虚方法_Utils.PrintInfo();
+			_09_策略模式接口_Utils.Exec();
+		}
+
+		static void Main03(string[] args)
+		{
+			预处理器指令.PrintInfo();
+			Using的用法.PrintInfo();
+			_01_正则表达式.PrintInfo();
+		}
+
+		static async Task Main04(string[] args)
+		{
+			_01_文件写入.PrintInfo();
+			// 异步读取和写入文件
+			await _01_文件写入.CopyFileAsync();
+		}
+
+		static void Main(string[] args)
+		{
+			Console.WriteLine("123456");
 		}
 	}
 }
