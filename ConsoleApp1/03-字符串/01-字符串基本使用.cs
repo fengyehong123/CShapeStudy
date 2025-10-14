@@ -6,6 +6,16 @@ namespace ConsoleApp1._03_字符串
 	{
 		public static void PrintInfo1()
 		{
+			/*
+				string? 表示 “这个字符串变量可能为 null”。
+				也就是说，这个变量可以同时存储：
+					一个正常的字符串值（如 "Hello"），
+					或者 null。
+			 */
+			string? line2 = null;
+			line2 = "你好";
+			Console.WriteLine(line2);
+
 			// 定义一个字符串
 			string str1 = "C:\\Windows";
 

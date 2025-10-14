@@ -91,7 +91,8 @@ namespace ConsoleApp1
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine("123456");
+			// _02_文件读取.ReadFile();
+			_03_目录操作.DirOperate();
 		}
 	}
 }
