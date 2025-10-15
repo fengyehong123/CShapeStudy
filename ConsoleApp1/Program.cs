@@ -92,7 +92,8 @@ namespace ConsoleApp1
 		static void Main(string[] args)
 		{
 			// _02_文件读取.ReadFile();
-			_03_目录操作.DirOperate();
+			// _03_目录操作.DirOperate1();
+			_03_目录操作.DirOperate2();
 		}
 	}
 }

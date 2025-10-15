@@ -13,10 +13,11 @@ namespace ConsoleApp1._13_IO处理
 		// 获取当前用户的桌面路径
 		private static readonly string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-		public static void DirOperate()
+		// 拼接文件夹路径
+		private static readonly string folderPath = Path.Combine(desktopPath, "测试文件夹");
+
+		public static void DirOperate1()
 		{
-			// 拼接文件夹路径
-			string folderPath = Path.Combine(desktopPath, "测试文件夹");
 			Console.WriteLine("__________________________________________");
 
 			// 如果文件夹不存在的话
@@ -50,6 +51,39 @@ namespace ConsoleApp1._13_IO处理
 			// 获取程序所在的目录
 			string exeDir = AppDomain.CurrentDomain.BaseDirectory;
 			Console.WriteLine($"\n程序所在目录为: {exeDir}\n");
+		}
+
+		public static void DirOperate2() 
+		{
+			// 创建一个文件夹对象
+			DirectoryInfo dir1 = new(folderPath);
+			if (!dir1.Exists)
+			{
+				Console.WriteLine("测试文件夹不存在, 需要新建...");
+
+				// 创建文件夹
+				dir1.Create();
+				Console.WriteLine("文件夹新建成功");
+
+				// 删除文件夹
+				dir1.Delete();
+				Console.WriteLine("新建的文件夹删除成功");
+			}
+
+			DirectoryInfo dir2 = new(desktopPath);
+			// 获取目录中的子目录
+			DirectoryInfo[] subDirs = dir2.GetDirectories();
+			foreach (DirectoryInfo subDir in subDirs)
+			{
+				Console.WriteLine(subDir.FullName);
+			}
+
+			// 获取目录中的子文件
+			FileInfo[] files = dir2.GetFiles();
+			foreach (FileInfo file in files)
+			{
+				Console.WriteLine(file.FullName);
+			}
 		}
 	}
 }
