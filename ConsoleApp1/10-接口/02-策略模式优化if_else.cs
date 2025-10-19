@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp1._09_接口
+namespace ConsoleApp1._10_接口
 {
 	// 🔴定义一个计算船舶运费的策略接口
 	public interface IShippingStrategy

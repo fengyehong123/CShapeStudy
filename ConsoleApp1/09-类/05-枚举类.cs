@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	/*
 	 * 🔴创建一个最基本的枚举类

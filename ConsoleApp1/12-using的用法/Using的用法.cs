@@ -5,9 +5,9 @@ using IntList = System.Collections.Generic.List<int>;
 // 🔴为命名空间取别名
 using SuperIO = System.IO;
 // 🔴导入类的静态成员
-using static ConsoleApp1._08_类._01_创建类;
+using static ConsoleApp1._09_类._01_创建类;
 
-namespace ConsoleApp1._11_using的用法
+namespace ConsoleApp1._12_using的用法
 {
 	public class Using的用法
 	{

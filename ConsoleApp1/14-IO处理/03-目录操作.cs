@@ -6,7 +6,7 @@ using System.IO;
 		System.IO.Directory — 提供一组静态方法，用于创建、删除、移动、枚举目录。
 		System.IO.DirectoryInfo — 提供实例方法，功能类似 Directory，但可复用对象、面向对象化。
  */
-namespace ConsoleApp1._13_IO处理
+namespace ConsoleApp1._14_IO处理
 {
 	public class _03_目录操作
 	{
@@ -75,8 +75,21 @@ namespace ConsoleApp1._13_IO处理
 			DirectoryInfo[] subDirs = dir2.GetDirectories();
 			foreach (DirectoryInfo subDir in subDirs)
 			{
+				// 获取文件夹的全路径
 				Console.WriteLine(subDir.FullName);
 			}
+
+			// 获取一个文件夹对象
+			DirectoryInfo subDir1 = subDirs[0];
+			// 获取该文件夹对象的父路径对象（由于可能不存在, 所以使用了 ?）
+			DirectoryInfo? parentObj = subDir1.Parent;
+
+			// 设置文字为红色
+			Console.ForegroundColor = ConsoleColor.Red;
+			// 获取父路径文件夹的名称（非全路径）,由于可能不存在, 所以使用了 ?. 的方式来获取属性
+			Console.WriteLine(parentObj?.Name);
+			// 恢复默认颜色
+			Console.ResetColor(); 
 
 			// 获取目录中的子文件
 			FileInfo[] files = dir2.GetFiles();

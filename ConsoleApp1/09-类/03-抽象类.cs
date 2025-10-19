@@ -11,7 +11,7 @@
   ✅ 常见用途：
 	定义一个 通用的基类（模板），子类必须去实现某些具体逻辑。
 */
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	public abstract class _03_抽象类
 	{

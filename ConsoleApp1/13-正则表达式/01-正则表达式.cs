@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 拆分文本            Regex.Split()       string[]
  * 
 */
-namespace ConsoleApp1._12_正则表达式
+namespace ConsoleApp1._13_正则表达式
 {
 	public partial class _01_正则表达式
 	{

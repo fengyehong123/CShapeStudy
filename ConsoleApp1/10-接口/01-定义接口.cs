@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp1._09_接口
+namespace ConsoleApp1._10_接口
 {
 	// 定义一个	Animal 接口
 	public interface IAnimal

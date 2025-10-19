@@ -5,13 +5,14 @@ using ConsoleApp1._03_字符串;
 using ConsoleApp1._04_循环;
 using ConsoleApp1._05_数组;
 using ConsoleApp1._06_集合;
-using ConsoleApp1._07_结构体;
-using ConsoleApp1._08_类;
-using ConsoleApp1._09_接口;
-using ConsoleApp1._10_预处理器指令;
-using ConsoleApp1._11_using的用法;
-using ConsoleApp1._12_正则表达式;
-using ConsoleApp1._13_IO处理;
+using ConsoleApp1._08_结构体;
+using ConsoleApp1._09_类;
+using ConsoleApp1._10_接口;
+using ConsoleApp1._11_预处理器指令;
+using ConsoleApp1._12_using的用法;
+using ConsoleApp1._13_正则表达式;
+using ConsoleApp1._14_IO处理;
+using ConsoleApp1._15_数据处理;
 
 // 系统的命名空间
 using System;
@@ -89,11 +90,20 @@ namespace ConsoleApp1
 			await _01_文件写入.CopyFileAsync();
 		}
 
+		static void Main05(string[] args)
+		{
+			_02_文件读取.ReadFile();
+			_03_目录操作.DirOperate1();
+			_03_目录操作.DirOperate2();
+			_04_文件操作.FileOperate1();
+			_05_路径处理.PathOperate();
+		}
+
 		static void Main(string[] args)
 		{
-			// _02_文件读取.ReadFile();
-			// _03_目录操作.DirOperate1();
-			_03_目录操作.DirOperate2();
+			_01_json.PrintInfo1();
+			_01_json.PrintInfo2();
+			_02_csv.PrintInfo1();
 		}
 	}
 }

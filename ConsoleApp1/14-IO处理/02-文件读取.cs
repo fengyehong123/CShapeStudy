@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp1._13_IO处理
+namespace ConsoleApp1._14_IO处理
 {
 	public class _02_文件读取
 	{

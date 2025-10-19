@@ -6,7 +6,7 @@
 	2. 但可以正常实例化。
 	3. 通常用于防止别人继承和修改类的行为。
 */
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	public sealed class _04_密封类
 	{

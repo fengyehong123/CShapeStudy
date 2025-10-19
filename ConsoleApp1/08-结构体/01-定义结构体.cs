@@ -25,7 +25,7 @@
 */
 using System;
 
-namespace ConsoleApp1._07_结构体
+namespace ConsoleApp1._08_结构体
 {
 	public struct _01_定义结构体
 	{

@@ -8,7 +8,7 @@
     1. 封装一些 工具方法 或 全局功能。
     2. 例如：数学运算类、日志类、配置访问类。
 */
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	public static class _02_静态类
 	{

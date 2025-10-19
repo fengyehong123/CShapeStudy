@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp1._07_结构体
+namespace ConsoleApp1._08_结构体
 {
 	// 定义一个接口
 	public interface IShape

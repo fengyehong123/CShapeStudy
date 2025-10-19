@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	public class _01_创建类
 	{

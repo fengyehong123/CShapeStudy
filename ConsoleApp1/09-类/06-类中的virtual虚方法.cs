@@ -10,7 +10,7 @@
  *    abstract 要求必须实现，而很多情况下我们希望提供一个“默认实现”，
  *    但又允许子类选择性重写，这正是 virtual 的价值所在
  */
-namespace ConsoleApp1._08_类
+namespace ConsoleApp1._09_类
 {
 	public class Base_类中的virtual虚方法
 	{

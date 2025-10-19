@@ -14,14 +14,18 @@
     <Folder Include="04-循环\" />
     <Folder Include="05-数组\" />
     <Folder Include="06-集合\" />
-    <Folder Include="07-结构体\" />
-    <Folder Include="08-类\" />
-    <Folder Include="09-接口\" />
-    <Folder Include="10-预处理器指令\" />
-    <Folder Include="11-using的用法\" />
-    <Folder Include="12-正则表达式\" />
-    <Folder Include="13-IO处理\" />
-    <Folder Include="14-数据处理\" />
-    <Folder Include="15-Linq表达式\" />
+    <Folder Include="08-结构体\" />
+    <Folder Include="09-类\" />
+    <Folder Include="10-接口\" />
+    <Folder Include="11-预处理器指令\" />
+    <Folder Include="12-using的用法\" />
+    <Folder Include="13-正则表达式\" />
+    <Folder Include="16-Linq表达式\" />
+    <Folder Include="07-函数\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 </Project>

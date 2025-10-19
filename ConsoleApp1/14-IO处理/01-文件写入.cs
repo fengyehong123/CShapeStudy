@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1._13_IO处理
+namespace ConsoleApp1._14_IO处理
 {
 	public class _01_文件写入
 	{
@@ -42,7 +42,7 @@ namespace ConsoleApp1._13_IO处理
 				// 追加内容到文件中
 				File.AppendAllText(filePath2, "追加的内容1\r\n");
 				// 一次追加多行
-				File.AppendAllLines(filePath2, new List<string> { "追加的内容2", "追加的内容3" });
+				File.AppendAllLines(filePath2, ["追加的内容2", "追加的内容3"]);
 
 				// 将字符串转换为字节数组
 				byte[] bytes = Encoding.UTF8.GetBytes(msg);

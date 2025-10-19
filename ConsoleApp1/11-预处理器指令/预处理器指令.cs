@@ -25,7 +25,7 @@ using System;
  * TRACE                              可用于日志跟踪
  * NET8_0_OR_GREATER                  表示运行时版本条件（C# 10+）
  */
-namespace ConsoleApp1._10_预处理器指令
+namespace ConsoleApp1._11_预处理器指令
 {
 	public class 预处理器指令
 	{
