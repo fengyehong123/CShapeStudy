@@ -36,11 +36,11 @@ namespace ConsoleApp1._05_数组
 
 			// 也可以在声明交错数组的时候, 直接初始化
 			int[][] jaggedArray2 =
-			{
-				new int[] {1, 2},
-				new int[] {3, 4, 5, 6},
-				new int[] {7, 8, 9}
-			};
+			[
+				[1, 2],
+				[3, 4, 5, 6],
+				[7, 8, 9]
+			];
 
 			// 遍历交错数组
 			for (int i = 0; i < jaggedArray2.Length; i++)

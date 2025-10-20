@@ -20,8 +20,6 @@
     <Folder Include="11-预处理器指令\" />
     <Folder Include="12-using的用法\" />
     <Folder Include="13-正则表达式\" />
-    <Folder Include="16-Linq表达式\" />
-    <Folder Include="07-函数\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,7 +10,7 @@ namespace ConsoleApp1._05_数组
 		public static void PrintInfo1()
 		{
 			Console.WriteLine("__________________________________________");
-			int[] arr1 = { 1, 2, 3 };
+			int[] arr1 = [1, 2, 3];
 
 			// 获取数组中元素的总个数
 			Console.WriteLine($"数组元素的数量是: {arr1.Length}");  // 数组元素的数量是: 3
@@ -28,12 +28,12 @@ namespace ConsoleApp1._05_数组
 			// Array 类是 C# 中所有数组的基类，它是在 System 命名空间中定义。
 			// Array 类提供了各种用于数组的属性和方法。
 
-			int[] arr1 = { 1, 2, 3 };
+			int[] arr1 = [1, 2, 3];
 			// 清空整个数组
 			Array.Clear(arr1, 0, arr1.Length);
 			Console.WriteLine($"数组的长度为: {arr1.Length}");
 
-			int[] arr2 = { 1, 2, 3 };
+			int[] arr2 = [1, 2, 3];
 			// 数组元素反转
 			Array.Reverse(arr2);
 			Console.WriteLine("逆转数组： ");
@@ -71,7 +71,8 @@ namespace ConsoleApp1._05_数组
 
 			// 可以使用Linq表达式, 对数组中的每一个元素进行处理
 			int[] arr7 = arr6.Select(item => item + 100).ToArray();
-			List<int> list7 = arr6.Select(item => item + 100).ToList();
+			// 迭代对象转换为List
+			List<int> list7 = [.. arr6.Select(item => item + 100)];
 
 			Console.WriteLine("__________________________________________");
 			string text = "123 456,789:101112";

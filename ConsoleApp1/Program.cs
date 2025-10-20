@@ -5,6 +5,7 @@ using ConsoleApp1._03_字符串;
 using ConsoleApp1._04_循环;
 using ConsoleApp1._05_数组;
 using ConsoleApp1._06_集合;
+using ConsoleApp1._07_函数;
 using ConsoleApp1._08_结构体;
 using ConsoleApp1._09_类;
 using ConsoleApp1._10_接口;
@@ -13,6 +14,7 @@ using ConsoleApp1._12_using的用法;
 using ConsoleApp1._13_正则表达式;
 using ConsoleApp1._14_IO处理;
 using ConsoleApp1._15_数据处理;
+using ConsoleApp1._16_Linq表达式;
 
 // 系统的命名空间
 using System;
@@ -99,11 +101,22 @@ namespace ConsoleApp1
 			_05_路径处理.PathOperate();
 		}
 
-		static void Main(string[] args)
+		static async Task Main06(string[] args)
 		{
+			// 数据处理
 			_01_json.PrintInfo1();
 			_01_json.PrintInfo2();
 			_02_csv.PrintInfo1();
+
+			// 函数
+			await _01_函数基本使用_Utils.PrintInfo();
+			_02_函数进阶使用.PrintInfo();
+		}
+
+		static void Main(string[] args) 
+		{
+			_01_Linq基本使用.Where筛选();
+			_01_Linq基本使用.Select投影();
 		}
 	}
 }
