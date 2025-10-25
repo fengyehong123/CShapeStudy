@@ -113,10 +113,25 @@ namespace ConsoleApp1
 			_02_函数进阶使用.PrintInfo();
 		}
 
-		static void Main(string[] args) 
+		static void Main07(string[] args) 
 		{
 			_01_Linq基本使用.Where筛选();
 			_01_Linq基本使用.Select投影();
+			_01_Linq基本使用.OrderBy排序();
+			_01_Linq基本使用.GroupBy分组();
+			_01_Linq基本使用.Distinct去重();
+			_01_Linq基本使用.Join连接();
+
+			_02_查询表达式语法.Test1();
+			_02_查询表达式语法.Test2();
+			_02_查询表达式语法.Test3();
+			_02_查询表达式语法.Test4();
+			_02_查询表达式语法.Test5();
+		}
+
+		static void Main(string[] args) 
+		{
+			Console.WriteLine("Hello World");
 		}
 	}
 }
