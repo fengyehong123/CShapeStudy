@@ -5,11 +5,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="01-特性\" />
     <Folder Include="02-反射\" />
+    <Folder Include="03-属性\" />
+    <Folder Include="04-委托\" />
   </ItemGroup>
 
 </Project>
