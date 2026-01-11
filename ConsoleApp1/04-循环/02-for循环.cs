@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1._04_循环
 {
-	internal class _02_for循环
+	public class _02_for循环
 	{
 		public static void PrintInfo()
 		{
