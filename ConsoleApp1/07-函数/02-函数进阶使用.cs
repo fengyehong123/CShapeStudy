@@ -2,6 +2,7 @@
 
 namespace ConsoleApp1._07_函数
 {
+	// 详情可以查看【委托】章节
 	public class _02_函数进阶使用
 	{
 		// 有返回值

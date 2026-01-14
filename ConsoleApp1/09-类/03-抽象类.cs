@@ -15,7 +15,11 @@ namespace ConsoleApp1._09_类
 {
 	public abstract class _03_抽象类
 	{
-		public string Name { get; set; }
+		// 普通的属性
+		public string? Name { get; set; }
+
+		// 抽象属性, 子类必须实现
+		public abstract int Age { get; set; }
 
 		// 抽象方法（子类必须实现）
 		public abstract void Speak();
@@ -27,7 +31,16 @@ namespace ConsoleApp1._09_类
 	// Dog类继承  _03_抽象类 ,然后实现里面的方法
 	public class Dog : _03_抽象类
 	{
-		public string Address { get; set; }
+		public string? Address { get; set; } = "地球";
+
+		// 实现父类的抽象属性
+		public override int Age { get; set; } = 18;
+
+		// 属性也可以是计算得到的
+		public string Msg
+		{
+			get { return $"我来自{this.Address}"; }
+		}
 
 		// 无参的构造函数
 		public Dog(){ }
@@ -61,6 +74,10 @@ namespace ConsoleApp1._09_类
 			_03_抽象类 dog3 = new Dog("宇宙银河系") { Name = "Tom" };
 			dog3.Eat();
 			dog3.Speak();
+
+			// 获取动态计算的属性
+			Dog dog4 = new("超级宇宙银河系") { Name = "FengYeHong" };
+			Console.WriteLine(dog4.Msg);
 		}
 	}
 }

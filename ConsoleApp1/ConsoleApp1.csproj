@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="01-数据类型\" />
     <Folder Include="02-判断与运算符\" />
-    <Folder Include="03-字符串\" />
     <Folder Include="04-循环\" />
     <Folder Include="05-数组\" />
     <Folder Include="06-集合\" />

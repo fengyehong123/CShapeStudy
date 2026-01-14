@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp1._03_字符串
+namespace ConsoleApp1._03_日期
 {
 	class _02_日期格式化为字符串
 	{
@@ -54,6 +54,15 @@ namespace ConsoleApp1._03_字符串
 			Console.WriteLine(dt.ToString("yyyy/MM/dd dddd tt hh:mm"));             // 2025/09/21 星期日 下午 05:16
 			Console.WriteLine(dt.ToString("yyyyMMdd"));                             // 20250921
 			Console.WriteLine(dt.ToString("yyyy-MM-dd HH:mm:ss.fff"));              // 2025-09-21 17:16:32.108
+
+			string time1 = DateTime.Now.ToString("yyyy-MM-dd");
+			Console.WriteLine("yyyy-MM-dd:{0}", time1);  // yyyy-MM-dd:2026-01-12
+
+			string time2 = DateTime.Now.ToString("yyyyMMdd");
+			Console.WriteLine("yyyyMMdd:{0}", time2);  // yyyyMMdd:20260112
+
+			string time3 = DateTime.Now.ToString("yyyy年MM月dd日");
+			Console.WriteLine("yyyy年MM月dd日:{0}", time3);  // yyyy年MM月dd日:2026年01月12日
 		}
 	}
 }
