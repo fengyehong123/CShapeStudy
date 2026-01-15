@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="02-反射\" />
-    <Folder Include="03-属性\" />
-    <Folder Include="04-委托\" />
+    <Folder Include="06-泛型\" />
   </ItemGroup>
 
 </Project>
