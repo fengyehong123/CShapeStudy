@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <!-- 依赖的框架 -->
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <!-- 关闭自动Using, Using时需要手动导入 -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UserSecretsId>dotnet-MyMonitorService-e4e75285-dee7-4046-82ba-a35bbe1823bd</UserSecretsId>
+    <!-- 不弹黑框控制台, 适合后台服务 -->
+    <OutputType>WinExe</OutputType>
+    <!-- 不输出调试信息 -->
+    <DebugType>none</DebugType>
+
+    <!-- 元数据 -->
+    <ApplicationIcon>assets\app.ico</ApplicationIcon>
+    <AssemblyTitle>My Monitor Service</AssemblyTitle>
+    <Description>自动监控并关闭指定进程的后台服务</Description>
+    <Company>XXX公司</Company>
+    <Product>监视线程</Product>
+
+    <!-- 版本 -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 依赖的包 -->
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
+    <!-- 不发布开发环境配置 -->
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </Content>	
+  </ItemGroup>
+  
+</Project>

@@ -6,3 +6,5 @@ ConsoleApp2/bin/
 ConsoleApp1/bin/
 ConsoleApp1/obj/
 ConsoleApp2/obj/
+/MyMonitorService/bin
+/MyMonitorService/obj
