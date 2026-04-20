@@ -45,7 +45,7 @@ namespace ConsoleApp1._07_函数
 		// 异步函数返回 Task 或 Task<T>
 		public static async Task<int> GetDataAsync()
 		{
-			// 延时3秒
+			// 延时1秒
 			await Task.Delay(1000);
 			return 42;
 		}

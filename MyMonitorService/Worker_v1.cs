@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MyMonitorService.Config;
 
 // 更加简洁的定义namespace的方法
 namespace MyMonitorService;
@@ -41,12 +42,12 @@ namespace MyMonitorService;
 	总结
 		DI容器会根据构造函数自动解析依赖
 */
-public class Worker(ILogger<Worker> logger, IOptionsMonitor<ProcessMonitorOptions> optionsMonitor) : BackgroundService
+public class Worker_v1(ILogger<Worker_v1> logger, IOptionsMonitor<MonitorOptions> optionsMonitor) : BackgroundService
 {
 	// 日志对象
-	private readonly ILogger<Worker> _logger = logger;
+	private readonly ILogger<Worker_v1> _logger = logger;
 	// 配置文件对象
-	private readonly IOptionsMonitor<ProcessMonitorOptions> _optionsMonitor = optionsMonitor;
+	private readonly IOptionsMonitor<MonitorOptions> _optionsMonitor = optionsMonitor;
 
 	protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 	{
@@ -67,7 +68,7 @@ public class Worker(ILogger<Worker> logger, IOptionsMonitor<ProcessMonitorOption
 					{
 						// 如果当前线程的运行时间 < 指定的最大时间的话
 						var runTime = DateTime.Now - proc.StartTime;
-						if (runTime.TotalMinutes < options.MaxMinutes)
+						if (runTime.TotalMinutes < options.ProcessMaxMinutes)
 						{
 							// 跳过, 不杀死线程
 							continue;
@@ -87,7 +88,7 @@ public class Worker(ILogger<Worker> logger, IOptionsMonitor<ProcessMonitorOption
 				}
 
 				// 延时
-				await Task.Delay(options.CheckIntervalSeconds * 1000, stoppingToken);
+				await Task.Delay(options.ProcessCheckIntervalSeconds * 1000, stoppingToken);
 			}
 			catch (TaskCanceledException)
 			{

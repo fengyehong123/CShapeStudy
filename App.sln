@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMonitorService", "MyMonitorService\MyMonitorService.csproj", "{864E427D-9D53-5D5F-B3B4-01DF90B9F42F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolLib", "ToolLib\ToolLib.csproj", "{78744C54-FDC0-AFAE-7BB5-04C6E57F3127}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{864E427D-9D53-5D5F-B3B4-01DF90B9F42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{864E427D-9D53-5D5F-B3B4-01DF90B9F42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{864E427D-9D53-5D5F-B3B4-01DF90B9F42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78744C54-FDC0-AFAE-7BB5-04C6E57F3127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78744C54-FDC0-AFAE-7BB5-04C6E57F3127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78744C54-FDC0-AFAE-7BB5-04C6E57F3127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78744C54-FDC0-AFAE-7BB5-04C6E57F3127}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

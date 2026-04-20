@@ -14,9 +14,9 @@
 
     <!-- 元数据 -->
     <ApplicationIcon>assets\app.ico</ApplicationIcon>
-    <AssemblyTitle>My Monitor Service</AssemblyTitle>
+    <AssemblyTitle>My_Monitor_Service</AssemblyTitle>
     <Description>自动监控并关闭指定进程的后台服务</Description>
-    <Company>XXX公司</Company>
+    <Company>XXX_Company</Company>
     <Product>监视线程</Product>
 
     <!-- 版本 -->
@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <!-- 依赖的包 -->
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.6" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
     <!-- 不发布开发环境配置 -->
     <Content Update="appsettings.Development.json">

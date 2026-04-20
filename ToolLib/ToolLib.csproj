@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<!-- 推荐用 .NET Framework -->
+    	<TargetFramework>net48</TargetFramework>
+	<!-- 关闭自动注册 -->
+    	<RegisterForComInterop>false</RegisterForComInterop>
+	<!-- 关闭自动生成AssemblyInfo -->
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<!-- 不输出调试信息 -->
+    	<DebugType>none</DebugType>
+  </PropertyGroup>
+
+</Project>
