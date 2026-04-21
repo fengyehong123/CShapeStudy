@@ -37,17 +37,18 @@ try
 		// services.AddHostedService<Worker_v1>();
 		// services.AddHostedService<Worker_v2>();
 		// services.AddHostedService<Worker_v3>();
+		// services.AddSingleton<TaskTool_v4>();
 		// ==================================================================
 
 		// 注册任务工具类, 让DI自动注入类
-		services.AddSingleton<TaskTool>();
+		services.AddSingleton<TaskTool_v5>();
 
 		// 注册服务
 		services.AddSingleton<IProcessMonitor_v4, ProcessMonitor_v4>();
 		services.AddSingleton<IHistoryCollector_v4, HistoryCollector_v4>();
 
 		// 添加服务所需的Worker
-		services.AddHostedService<Worker_v4>();
+		services.AddHostedService<Worker_v5>();
 	});
 
 	IHost host = builder.Build();

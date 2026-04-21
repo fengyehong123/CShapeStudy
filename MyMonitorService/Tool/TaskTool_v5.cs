@@ -6,32 +6,28 @@ using MyMonitorService.Config;
 
 namespace MyMonitorService.Tool;
 
-public class TaskTool(ILogger<TaskTool> logger)
+public class TaskTool_v5(ILogger<TaskTool_v5> logger)
 {
-	private readonly ILogger<TaskTool> _logger = logger;
+	private readonly ILogger<TaskTool_v5> _logger = logger;
 
 	public async Task RunTaskMonitor(
 		string taskName,
-		TaskFlag taskFlag,
 		Func<CancellationToken, Task> action,
 		Func<int> getIntervalSeconds,
+		int maxConcurrency,
 		CancellationToken token)
 	{
+		var semaphore = new SemaphoreSlim(maxConcurrency);
+
 		try
 		{
 			while (!token.IsCancellationRequested)
 			{
+				// 并发控制执行
+				_ = RunWithLimitAsync(semaphore, action, taskName, token);
+
 				// 每次执行任务的时候, 都主动获取一次Task的时间(因为appsettings.json文件可能热更新)
 				var interval = getIntervalSeconds();
-
-				// 加锁执行任务
-				await RunWithLockAsync(
-					taskFlag,
-					action,
-					taskName,
-					token
-				);
-
 				// 延时
 				await Task.Delay(TimeSpan.FromSeconds(interval), token);
 			}
@@ -44,24 +40,25 @@ public class TaskTool(ILogger<TaskTool> logger)
 	}
 
 	// 加锁运行任务
-	private async Task RunWithLockAsync(
-		TaskFlag flag,
+	private async Task RunWithLimitAsync(
+		SemaphoreSlim semaphore,
 		Func<CancellationToken, Task> action,
-		string name,
+		string taskName,
 		CancellationToken token)
 	{
-		if (Interlocked.Exchange(ref flag.Value, 1) != 0)
+		// 如果达到了最大并发数
+		if (!await semaphore.WaitAsync(0, token))
 		{
-			_logger.LogInformation("[{Time}] {Name} 正在运行，跳过", DateTime.Now, name);
+			_logger.LogWarning("{TaskName} skipped (max concurrency reached)", taskName);
 			return;
 		}
 
 		try
 		{
-			_logger.LogInformation("[{Time}] {Name} 开始", DateTime.Now, name);
+			_logger.LogInformation("[{Time}] {Name} 开始", DateTime.Now, taskName);
 			// 执行任务
 			await action(token);
-			_logger.LogInformation("[{Time}] {Name} 完成", DateTime.Now, name);
+			_logger.LogInformation("[{Time}] {Name} 完成", DateTime.Now, taskName);
 		}
 		catch (Exception ex)
 		{
@@ -69,7 +66,7 @@ public class TaskTool(ILogger<TaskTool> logger)
 		}
 		finally
 		{
-			Interlocked.Exchange(ref flag.Value, 0);
+			semaphore.Release();
 		}
 	}
 }

@@ -10,29 +10,26 @@ using System.Threading.Tasks;
 // 更加简洁的定义namespace的方法
 namespace MyMonitorService;
 
-// 此版本就能满足需求
-public class Worker_v4(
-	ILogger<Worker_v4> logger,
+// Worker_v4版本就能满足需求
+// Worker_v5版本只是为了体验SemaphoreSlim并发控制的用法而已
+public class Worker_v5(
+	ILogger<Worker_v5> logger,
 	IProcessMonitor_v4 processMonitor,
 	IHistoryCollector_v4 historyCollector,
 	IOptionsMonitor<MonitorOptions> optionsMonitor,
-	TaskTool_v4 taskTool) : BackgroundService
+	TaskTool_v5 taskTool) : BackgroundService
 {
 	// 接口对象
 	private readonly IProcessMonitor_v4 _processMonitor = processMonitor;
 	private readonly IHistoryCollector_v4 _historyCollector = historyCollector;
 	// 日志对象
-	private readonly ILogger<Worker_v4> _logger = logger;
+	private readonly ILogger<Worker_v5> _logger = logger;
 	// 配置文件对象
 	private readonly IOptionsMonitor<MonitorOptions> _optionsMonitor = optionsMonitor;
 
 	// 工具类
-	// 使用【services.AddSingleton<TaskTool_v4>();】注册过, 此处会自动注入 
-	private readonly TaskTool_v4 _taskTool = taskTool;
-
-	// 定义任务状态的Flag
-	private readonly TaskFlag _processFlag = new();
-	private readonly TaskFlag _historyFlag = new();
+	// 使用【services.AddSingleton<TaskTool_v5>();】注册过, 此处会自动注入 
+	private readonly TaskTool_v5 _taskTool = taskTool;
 
 	protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 	{
@@ -40,20 +37,20 @@ public class Worker_v4(
 
 		// 进程监控任务
 		var processTask = _taskTool.RunTaskMonitor(
-			"ProcessMonitor",
-			_processFlag,
-			_processMonitor.Run,
+			taskName: "ProcessMonitor",
+			action: _processMonitor.Run,
 			// 此处传递的只是方法的引用, 并不是执行方法
-			() => _optionsMonitor.CurrentValue.ProcessCheckIntervalSeconds,
+			getIntervalSeconds: () => _optionsMonitor.CurrentValue.ProcessCheckIntervalSeconds,
+			maxConcurrency: 1,
 			stoppingToken
 		);
 
 		// 历史记录查询任务
 		var historyTask = _taskTool.RunTaskMonitor(
-			"HistoryCollector",
-			_historyFlag,
-			_historyCollector.Run,
-			() => _optionsMonitor.CurrentValue.BrowerHistoryCheckIntervalSeconds,
+			taskName: "HistoryCollector",
+			action: _historyCollector.Run,
+			getIntervalSeconds: () => _optionsMonitor.CurrentValue.BrowerHistoryCheckIntervalSeconds,
+			maxConcurrency: 1,
 			stoppingToken
 		);
 
